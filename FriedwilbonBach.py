@@ -41,7 +41,7 @@ for i, methode in enumerate(methoden):                                          
     # === Daten für den aktuellen Block anzeigen ===
     daten = block[header_spalten].to_numpy()    
     # print("\ndaten:\n", daten)
-                                                                                                                                        # Extrahiert die Werte der angegebenen Prinzipien-Spalten aus dem Block als NumPy-Array                                                                                                                     # Gibt die extrahierten Daten aus dem Block als NumPy-Array aus
+                                                                                                                                        # Extrahiert die Werte der angegebenen Prinzipien-Spalten aus dem Block als NumPy-Array
 
     # === Spalten mit konstanter Ausprägung herausfiltern ===
     nicht_konstante_spalten = []                                                                                                        # Liste für die Spalten mit Variation (mehr als einen einzigartigen Wert)
