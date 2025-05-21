@@ -14,7 +14,7 @@ tabelle = pd.read_excel(dateipfad, sheet_name="Prinzip_Rate")                   
 # === Cialdini-Prinzipien befinden sich in den ersten 6 Spalten ===
 header_spalten = tabelle.columns[0:6]                                                                                                   # Extrahiert die ersten 6 Spalten der Tabelle (die Cialdini-Prinzipien) und speichert sie in der Variablen 'prinzip_spalten'
 print("\nCialdini-Prinzipien (Spaltennamen):")                                                                                          # Gibt eine Überschrift für die Ausgabe der Cialdini-Prinzipien aus
-# print("\nheader_spalten:\n", header_spalten)                                                                                                                   # Gibt die Namen der ersten 6 Spalten aus, die die Cialdini-Prinzipien repräsentieren
+# print("\nheader_spalten:\n", header_spalten)                                                                                          # Gibt die Namen der ersten 6 Spalten aus, die die Cialdini-Prinzipien repräsentieren
 
 
 # === Methode befindet sich in Spalte 8 (Index 7) ===
