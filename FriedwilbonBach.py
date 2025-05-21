@@ -151,19 +151,19 @@ for i, methode in enumerate(methoden):                                          
                 # print(f"  Korrigierter p-Wert: {p_korr:.4f}")    
 
                 # Bestimmt, welches Prinzip stärker ist (höheres Median)
-                if median1 > median2:                                                                                                       # Vergleicht, ob das erste Prinzip einen höheren Median hat als das zweite
-                    staerker, schwaecher = name1, name2                                                                                     # Wenn das erste Prinzip stärker ist, wird es als 'staerker' bezeichnet, das zweite als 'schwaecher'
-                    median_staerker, median_schwaecher = median1, median2                                                                   # Die entsprechenden Mediane werden den Variablen zugewiesen
-                else:                                                                                                                       # Wenn das zweite Prinzip einen höheren Median hat
-                    staerker, schwaecher = name2, name1                                                                                     # Das zweite Prinzip wird als 'staerker' bezeichnet, das erste als 'schwaecher'
-                    median_staerker, median_schwaecher = median2, median1                                                                   # Die Mediane werden den Variablen zugewiesen
+                if median1 > median2:                                                                                                   # Vergleicht, ob das erste Prinzip einen höheren Median hat als das zweite
+                    staerker, schwaecher = name1, name2                                                                                 # Wenn das erste Prinzip stärker ist, wird es als 'staerker' bezeichnet, das zweite als 'schwaecher'
+                    median_staerker, median_schwaecher = median1, median2                                                               # Die entsprechenden Mediane werden den Variablen zugewiesen
+                else:                                                                                                                   # Wenn das zweite Prinzip einen höheren Median hat
+                    staerker, schwaecher = name2, name1                                                                                 # Das zweite Prinzip wird als 'staerker' bezeichnet, das erste als 'schwaecher'
+                    median_staerker, median_schwaecher = median2, median1                                                               # Die Mediane werden den Variablen zugewiesen
 
                 # Gibt das signifikante Ergebnis aus
                 print(f"'{staerker}' ist signifikant stärker als '{schwaecher}' (p = {p_korr:.4f}), "
                       f"Median {staerker}: {median_staerker:.2f} vs. {schwaecher}: {median_schwaecher:.2f}.")
 
     else:
-        print("\nKeine signifikanten Unterschiede nach Bonferroni-Korrektur.")                                                              # Gibt an, dass es keine signifikanten Unterschiede gab
+        print("\nKeine signifikanten Unterschiede nach Bonferroni-Korrektur.")                                                          # Gibt an, dass es keine signifikanten Unterschiede gab
 
 # Leere DataFrame für die Heatmap-Daten vorbereiten
 # → Erstelle eine leere Tabelle mit den Methoden als Zeilen (Index) und den Prinzipien als Spalten
