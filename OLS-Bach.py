@@ -177,3 +177,19 @@ plt.ylabel("Kompromittierrate")
 plt.title(f"Lineare Regression: {prinzipien_namen[5]} vs. Kompromittierrate")
 plt.tight_layout()
 plt.savefig("Scatterplot Knappheit.png")
+
+print("\n--- Univariate OLS-Modelle (Scatterplot-Analyse) ---")
+
+for i, prinzip in enumerate(prinzipien_namen):                                                                                              # Schleife über Index und Namen der Prinzipien
+    x = sm.add_constant(prinzipien_daten[prinzip])                                                                                          # Unabhängige Variable mit Intercept-Spalte erzeugen
+    y = kompromittier_rate                                                                                                                  # Abhängige Variable (Response) festlegen
+    model_uni = sm.OLS(y, x).fit()                                                                                                          # Univariates OLS-Modell fitten
+    
+    print(f"\n{prinzip}:")                                                                                                                  # Namen des aktuellen Prinzips ausgeben
+    print(f"  Koeffizient: {model_uni.params.iloc[1]:.4f}")                                                                                 # Koeffizient des Prädiktors ausgeben
+    print(f"  p-Wert: {model_uni.pvalues.iloc[1]:.4f}")                                                                                     # p-Wert des Koeffizienten ausgeben
+    
+    if model_uni.pvalues.iloc[1] < 0.05:                                                                                                    # Prüfen, ob p-Wert signifikant (<0.05) ist
+        print("  → Signifikanter Zusammenhang")                                                                                             # Signifikanz anzeigen
+    else:
+        print("  → Kein signifikanter Zusammenhang")                                                                                        # Keine Signifikanz anzeigen
